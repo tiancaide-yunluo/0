@@ -1,0 +1,17 @@
+name: runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        shard: [1]
+
+    steps:
+      - name: runner
+        run: |
+          sleep 9999999999;
